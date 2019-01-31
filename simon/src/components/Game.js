@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 
 import '../css/Game.css'
 
@@ -53,6 +54,7 @@ class Game extends Component {
             </div>
 
             <button onClick={() => this.startGame()}>Start game</button>
+            <Link to="/highscores">Highscores</Link>
         </div>
       );
     }
