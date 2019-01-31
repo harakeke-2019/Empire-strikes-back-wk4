@@ -2,12 +2,16 @@ import React, { Component } from 'react';
 
 import '../css/Game.css'
 
+function randomizeColors (colors, length)  {
+    return Array.from({length}, _ => colors[Math.floor(Math.random() * 4)])
+}
+
 class Game extends Component {
     constructor(props) {
         super(props)
 
         this.state = {
-            currentScore: 4,
+            currentScore: 8,
             scoreTracker: 0,
             colors: ['red', 'green', 'blue','yellow'],
             randomColors: [],
@@ -17,10 +21,17 @@ class Game extends Component {
         }
     }
 
+    startGame = _ => {
+        const { colors, currentScore, randomColors } = this.state;
 
-
+        this.setState({
+            randomColors : randomizeColors(colors, currentScore)
+        })
+        console.log(randomColors)
+    }
 
     render() {
+        console.log('render')
       return (
         <div className="App">
             <h1>Simon says..</h1>
@@ -40,6 +51,8 @@ class Game extends Component {
                 onClick={() => console.log('yellow')}
             >
             </div>
+
+            <button onClick={() => this.startGame()}>Start game</button>
         </div>
       );
     }
