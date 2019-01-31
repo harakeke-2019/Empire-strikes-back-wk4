@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "bootstrap": "^4.2.1",
+    "express": "^4.16.4",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  },
+  "name": "Empire-strikes-back-wk4",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/harakeke-2019/Empire-strikes-back-wk4.git",
+  "license": "MIT"
+}
