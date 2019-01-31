@@ -1,6 +1,6 @@
 body {
-    /* background-image: url(https://images.pexels.com/photos/695644/pexels-photo-695644.jpeg?cs=srgb&dl=art-black-candle-695644.jpg&fm=jpg);
-    background-size: cover; */
+    background-image: url(https://picserio.com/data/out/10/white-hd-wallpapers-1080p_2355719.jpg);
+    background-size: cover;
   }
   
   h1{
@@ -16,7 +16,7 @@ body {
   
   #text1{
     font-family: orbitron;
-    color: rgb(43, 173, 98);
+    color:black;
     text-align: center;
     font-size: 50px;
   }
@@ -24,7 +24,7 @@ body {
   #green{
     background-color: #2ECC71;
     border-radius: 50% 0px 0px;
-    height: 200px;
+    height: 205px;
     border: solid;
     border-color: black;
     border-width: 15px;
@@ -32,7 +32,7 @@ body {
   #yellow{
     background-color: #F7CA18;
     border-radius: 0px 50% 0px 0px;
-    height: 200px;
+    height: 205px;
     border: solid;
     border-color: black;
     border-width: 15px;
@@ -40,7 +40,7 @@ body {
   #blue{
     background-color: #22A7F0;
     border-radius: 0px 0px  0px 50%;
-    height: 200px;
+    height: 205px;
     border: solid;
     border-color: black;
     border-width: 15px;
@@ -48,7 +48,7 @@ body {
   #red{
     background-color: #F22613;
     border-radius:  0px 0px 50% 0px;
-    height: 200px;
+    height: 205px;
     border: solid;
     border-color: black;
     border-width: 15px;
@@ -56,7 +56,6 @@ body {
   }
   #center {
   /*float: none;*/
-  color: white;
   font-family: fantasy;
   position: absolute;
     text-align:  center;
@@ -73,30 +72,29 @@ body {
     font-family: Obitron;
   }
   #display {
-    background-color:rgb(134, 131, 131);
+    background-color:rgb();
     border-width: medium;
   font-size: 40px;
     margin: auto;
     margin-top: 25px;
+    font-family: "orbitron";
   border-radius: 10px;
   border-color: black	;
   border-style: solid;
   max-width: 120px;
   padding: 10px;
-  color: #39FF14;
+  color: rgb(134, 131, 131);
   padding-right: 0px;
   padding-left: 0px;
-  
-  font-family: orbitron;
   }
 
   .start {
-    background-color: white);
+    background-color: black;
     font-family: "Orbitron";
     font-weight: bold;
     font-size: 20px;
     text-align: bottom;
-    color: black;
+    color: rgb(134, 131, 131);;
     position: center;
     border-radius: 20%;
     height: 65px;
