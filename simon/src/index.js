@@ -3,9 +3,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+<<<<<<< HEAD
 import 'bootstrap/dist/css/bootstrap.min.css'
+=======
+import {HashRouter as Router} from 'react-router-dom'
+import 'semantic-ui-css/semantic.min.css';
+>>>>>>> 31ab8a0083e0a08906b73efd6e816dd92b687285
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+    <Router>
+        <App />
+    </Router>, 
+
+document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

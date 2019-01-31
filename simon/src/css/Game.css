@@ -1,0 +1,115 @@
+body {
+    /* background-image: url(https://images.pexels.com/photos/695644/pexels-photo-695644.jpeg?cs=srgb&dl=art-black-candle-695644.jpg&fm=jpg);
+    background-size: cover; */
+  }
+  
+  h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 60px;
+  }
+  #wrapper {
+    position:relative;
+    top: 30px;
+    margin: auto;
+    width: 400px;
+  }
+  
+  #text1{
+    font-family: orbitron;
+    color: rgb(43, 173, 98);
+    text-align: center;
+    font-size: 50px;
+  }
+  
+  #green{
+    background-color: #2ECC71;
+    border-radius: 50% 0px 0px;
+    height: 200px;
+    border: solid;
+    border-color: black;
+    border-width: 15px;
+  }
+  #yellow{
+    background-color: #F7CA18;
+    border-radius: 0px 50% 0px 0px;
+    height: 200px;
+    border: solid;
+    border-color: black;
+    border-width: 15px;
+  }
+  #blue{
+    background-color: #22A7F0;
+    border-radius: 0px 0px  0px 50%;
+    height: 200px;
+    border: solid;
+    border-color: black;
+    border-width: 15px;
+  }
+  #red{
+    background-color: #F22613;
+    border-radius:  0px 0px 50% 0px;
+    height: 200px;
+    border: solid;
+    border-color: black;
+    border-width: 15px;
+  
+  }
+  #center {
+  /*float: none;*/
+  color: white;
+  font-family: fantasy;
+  position: absolute;
+    text-align:  center;
+    vertical-align: middle;
+    border-radius: 50%;
+    margin: 25%;
+    width: 200px;
+    height: 200px;
+    border: solid black;
+   background: black;
+  
+  }
+  #gameTitle{
+    font-family: Obitron;
+  }
+  #display {
+    background-color:rgb(134, 131, 131);
+    border-width: medium;
+  font-size: 40px;
+    margin: auto;
+    margin-top: 25px;
+  border-radius: 10px;
+  border-color: black	;
+  border-style: solid;
+  max-width: 120px;
+  padding: 10px;
+  color: #39FF14;
+  padding-right: 0px;
+  padding-left: 0px;
+  
+  font-family: orbitron;
+  }
+
+  .start {
+    background-color: white);
+    font-family: "Orbitron";
+    font-weight: bold;
+    font-size: 20px;
+    text-align: bottom;
+    color: black;
+    position: center;
+    border-radius: 20%;
+    height: 65px;
+    width: 150px;
+    margin-left: 460px;
+    margin-top: 100px;
+  }
+  .by{
+    z-index: -1;
+    text-align: center;
+    font-size: 40px;
+    position: relative;
+    top: 40px;
+    color:black;
+    font-family: Calibri;
+  }
