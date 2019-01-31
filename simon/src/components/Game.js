@@ -12,27 +12,48 @@ class Game extends Component {
         super(props)
 
         this.state = {
-            currentScore: 8,
+            currentScore: 10,
             scoreTracker: 0,
             colors: ['red', 'green', 'blue','yellow'],
             randomColors: [],
             guessedColors: [],
             wrongGuess: false, 
-            hasStarted: false
+            hasStarted: false,
+            stlye: {
+                backgroundColor: 'black'
+            }
         }
     }
 
     startGame = _ => {
         const { colors, currentScore, randomColors } = this.state;
 
+
+        let originalColor = [...randomColors];
+
         this.setState({
             randomColors : randomizeColors(colors, currentScore)
         })
-        console.log(randomColors)
-    }
+        //console.log(randomColors)
+
+        function changeColor () {
+            for(let i = 0; i < originalColor.length; i++) {
+                setTimeout(function(i){
+                    return function(){
+                      console.log('printing, ', i);
+                      originalColor[i] ='black'
+                      console.log(originalColor)
+                    }
+                  }(i), i*1000)
+                }
+            }
+
+
+    changeColor()
+}
+    
 
     render() {
-        console.log('render')
       return (
         <div className="App">
             <h1>Simon says..</h1>
