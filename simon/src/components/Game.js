@@ -30,6 +30,7 @@ class Game extends Component {
         const { colors, currentScore, randomColors } = this.state;
 
         let originalColor = [...randomColors];
+        let color = [...originalColor]
         const self = this
 
         this.setState({
@@ -41,13 +42,18 @@ class Game extends Component {
         for(let i = 0; i < originalColor.length; i++) {
             setTimeout(function(){
 
+                let original
+
                 return function(){
                     if(originalColor[i] === 'red') {
+                        original = 'red'
                         self.setState({
                             red: 'black'
                         })
+
                     }
                     if(originalColor[i] === 'green') {
+                    
                         self.setState({
                             green: 'black'
                         })
@@ -62,15 +68,33 @@ class Game extends Component {
                             blue: 'black'
                         })
                     }
+                    console.log('original', original)
+
                     console.log(originalColor[i])
                     console.log('printing, ', i);
                     originalColor[i] ='black'
-                    console.log(originalColor)
                 }
                 
-                }(), i*1000)
                 
-                console.log('random',randomColors)
+                }(), i*1000)
+
+                let startInterval = setInterval(() => {
+                    self.setState({
+                        red: 'red'
+                    })
+                    self.setState({
+                        green: 'green'
+                    })
+                    self.setState({
+                        yellow: 'yellow'
+                    })
+                    self.setState({
+                        blue: 'blue'
+                    })
+                    clearInterval(startInterval)
+                }, 1500)
+
+                
             }
                 
   
