@@ -124,6 +124,7 @@ class Game extends Component {
       return (
         <div className="App">
             <h1>Simon says..</h1>
+
             <div style={{width: '200px', height: '200px', backgroundColor: `${this.state.red}` }}
                 onClick={() => this.pushRed()}
             >
