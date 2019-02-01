@@ -12,43 +12,112 @@ class Game extends Component {
         super(props)
 
         this.state = {
-            currentScore: 8,
+            currentScore: 3,
             scoreTracker: 0,
             colors: ['red', 'green', 'blue','yellow'],
             randomColors: [],
             guessedColors: [],
             wrongGuess: false, 
-            hasStarted: false
+            hasStarted: false,
+            red: 'red',
+            green: 'green',
+            yellow: 'yellow',
+            blue: 'blue'
         }
     }
 
     startGame = _ => {
         const { colors, currentScore, randomColors } = this.state;
 
+        let originalColor = [...randomColors];
+        let color = [...originalColor]
+        const self = this
+
         this.setState({
             randomColors : randomizeColors(colors, currentScore)
         })
-        console.log(randomColors)
-    }
+        //console.log(randomColors)
+
+        
+        for(let i = 0; i < originalColor.length; i++) {
+            setTimeout(function(){
+
+                let original
+
+                return function(){
+                    if(originalColor[i] === 'red') {
+                        original = 'red'
+                        self.setState({
+                            red: 'black'
+                        })
+
+                    }
+                    if(originalColor[i] === 'green') {
+                    
+                        self.setState({
+                            green: 'black'
+                        })
+                    }
+                    if(originalColor[i] === 'yellow') {
+                        self.setState({
+                            yellow: 'black'
+                        })
+                    }
+                    if(originalColor[i] === 'blue') {
+                        self.setState({
+                            blue: 'black'
+                        })
+                    }
+                    console.log('original', original)
+
+                    console.log(originalColor[i])
+                    console.log('printing, ', i);
+                    originalColor[i] ='black'
+                }
+                
+                
+                }(), i*1000)
+
+                let startInterval = setInterval(() => {
+                    self.setState({
+                        red: 'red'
+                    })
+                    self.setState({
+                        green: 'green'
+                    })
+                    self.setState({
+                        yellow: 'yellow'
+                    })
+                    self.setState({
+                        blue: 'blue'
+                    })
+                    clearInterval(startInterval)
+                }, 1500)
+
+                
+            }
+                
+  
+}
+    
 
     render() {
-        console.log('render')
       return (
         <div className="App">
             <h1>Simon says..</h1>
-            <div className="btn" id="red" value="1"
+            <div style={{width: '200px', height: '200px', backgroundColor: `${this.state.red}` }}
                 onClick={() => console.log('red')}
             >
             </div>
-            <div className="btn" id="green" value="2"
+            <div style={{width: '200px', height: '200px', backgroundColor: `${this.state.green}` }}
                 onClick={() => console.log('green')}
             >
             </div>
-            <div className="btn" id="blue" value="3"
+            <div style={{width: '200px', height: '200px', backgroundColor: `${this.state.yellow}` }}
                 onClick={() => console.log('blue')}
             >
             </div>
-            <div className="btn" id="yellow" value="4"
+            <div style={{width: '200px', height: '200px', backgroundColor: `${this.state.blue}` }}
                 onClick={() => console.log('yellow')}
             >
             </div>

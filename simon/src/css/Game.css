@@ -68,22 +68,53 @@ body {
     box-sizing: border-box;
     float: left; 
 }
+<<<<<<< HEAD
 // eslint-disable-next-line 
 #red{
+||||||| merged common ancestors
+
+#red{
+=======
+
+.red{
+>>>>>>> d0bf4fe4893bd69e54ff895fd07d25f74443398a
     background-color: red;
 
+<<<<<<< HEAD
 }
 // eslint-disable-next-line 
 #green {
+||||||| merged common ancestors
+#green {
+=======
+.green {
+>>>>>>> d0bf4fe4893bd69e54ff895fd07d25f74443398a
     background-color: green;
 }
+<<<<<<< HEAD
 // eslint-disable-next-line 
 #blue{
+||||||| merged common ancestors
+
+#blue{
+=======
+
+.blue{
+>>>>>>> d0bf4fe4893bd69e54ff895fd07d25f74443398a
     background-color: blue;
 }
+<<<<<<< HEAD
 // eslint-disable-next-line 
 #yellow {
+||||||| merged common ancestors
+
+#yellow {
+=======
+
+.yellow {
+>>>>>>> d0bf4fe4893bd69e54ff895fd07d25f74443398a
     background-color: yellow;
+<<<<<<< HEAD
 }
     body{
         background-image: url(https://picserio.com/data/out/10/white-hd-wallpapers-1080p_2355719.jpg);
@@ -200,3 +231,12 @@ body {
         color:black;
         font-family: Calibri;
     }
+||||||| merged common ancestors
+}
+=======
+}
+
+.black {
+    background-color: black;
+}
+>>>>>>> d0bf4fe4893bd69e54ff895fd07d25f74443398a
