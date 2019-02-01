@@ -125,15 +125,18 @@ class Game extends Component {
         <div className="App">
             <h1>Simon says..</h1>
 
-            <div style={{width: '200px', height: '200px', backgroundColor: `${this.state.red}` }}
+            <div  style={{width: '200px', 
+            height: '200px', 
+            backgroundColor: `${this.state.red}`
+        }}
                 onClick={() => this.pushRed()}
             >
             </div>
-            <div style={{width: '200px', height: '200px', backgroundColor: `${this.state.green}` }}
+            <div  style={{width: '200px', height: '200px', backgroundColor: `${this.state.green}` }}
                 onClick={() => this.pushGreen()}
             >
             </div>
-            <div style={{width: '200px', height: '200px', backgroundColor: `${this.state.yellow}` }}
+            <div  style={{width: '200px', height: '200px', backgroundColor: `${this.state.yellow}` }}
                 onClick={() => this.pushYellow()}
             >
             </div>
@@ -142,7 +145,7 @@ class Game extends Component {
             >
             </div>
 
-            <button onClick={() => this.startGame()}>Start game</button>
+            <button className="start" onClick={() => this.startGame()}>Start game</button>
             <Link to="/highscores">Highscores</Link>
         </div>
       );
