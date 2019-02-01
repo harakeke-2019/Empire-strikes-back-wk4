@@ -12,7 +12,7 @@ class Game extends Component {
         super(props)
 
         this.state = {
-            currentScore: 3,
+            currentScore: 4,
             scoreTracker: 0,
             colors: ['red', 'green', 'blue','yellow'],
             randomColors: [],
@@ -30,7 +30,6 @@ class Game extends Component {
         const { colors, currentScore, randomColors } = this.state;
 
         let originalColor = [...randomColors];
-        let color = [...originalColor]
         const self = this
 
         this.setState({
@@ -42,11 +41,8 @@ class Game extends Component {
         for(let i = 0; i < originalColor.length; i++) {
             setTimeout(function(){
 
-                let original
-
                 return function(){
                     if(originalColor[i] === 'red') {
-                        original = 'red'
                         self.setState({
                             red: 'black'
                         })
@@ -68,20 +64,22 @@ class Game extends Component {
                             blue: 'black'
                         })
                     }
-                    console.log('original', original)
 
-                    console.log(originalColor[i])
+                    console.log(originalColor)
                     console.log('printing, ', i);
                     originalColor[i] ='black'
                 }
                 
                 
-                }(), i*1000)
+                }(), i*1000) 
+            }
 
-                let startInterval = setInterval(() => {
+            setTimeout(function(){
+                return function(){
                     self.setState({
                         red: 'red'
                     })
+                    
                     self.setState({
                         green: 'green'
                     })
@@ -91,14 +89,35 @@ class Game extends Component {
                     self.setState({
                         blue: 'blue'
                     })
-                    clearInterval(startInterval)
-                }, 1500)
-
+                }
                 
-            }
                 
-  
+                }(), 1000) 
 }
+    pushRed = _ => {
+        const { guessedColors } = this.state
+
+        guessedColors.push('red')
+        console.log(guessedColors)
+    }
+    pushYellow = _ => {
+        const { guessedColors } = this.state
+        
+        guessedColors.push('yellow')
+        console.log(guessedColors)
+    }
+    pushGreen = _ => {
+        const { guessedColors } = this.state
+        
+        guessedColors.push('green')
+        console.log(guessedColors)
+    }
+    pushBlue = _ => {
+        const { guessedColors } = this.state
+        
+        guessedColors.push('blue')
+        console.log(guessedColors)
+    }
     
 
     render() {
@@ -106,19 +125,19 @@ class Game extends Component {
         <div className="App">
             <h1>Simon says..</h1>
             <div style={{width: '200px', height: '200px', backgroundColor: `${this.state.red}` }}
-                onClick={() => console.log('red')}
+                onClick={() => this.pushRed()}
             >
             </div>
             <div style={{width: '200px', height: '200px', backgroundColor: `${this.state.green}` }}
-                onClick={() => console.log('green')}
+                onClick={() => this.pushGreen()}
             >
             </div>
             <div style={{width: '200px', height: '200px', backgroundColor: `${this.state.yellow}` }}
-                onClick={() => console.log('blue')}
+                onClick={() => this.pushYellow()}
             >
             </div>
             <div style={{width: '200px', height: '200px', backgroundColor: `${this.state.blue}` }}
-                onClick={() => console.log('yellow')}
+                onClick={() => this.pushBlue()}
             >
             </div>
 
